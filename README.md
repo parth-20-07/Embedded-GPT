@@ -1,47 +1,50 @@
+**Embedded-GPT**
+
+**Table of Contents**
 <!-- TOC -->
 
 - [Introduction](#introduction)
-- [How to setup the project](#how-to-setup-the-project)
-    - [Install dependencies](#install-dependencies)
-- [How to use the project](#how-to-use-the-project)
-    - [Assignment 1](#assignment-1)
-- [Understanding the Assignment](#understanding-the-assignment)
-    - [Assignment 1](#assignment-1)
-        - [file 1](#file-1)
+- [Algorithm](#algorithm)
+- [To-Do](#to-do)
 - [Designer Details](#designer-details)
 - [License](#license)
 
 <!-- /TOC -->
 
 # Introduction
+This is a GPT-based project which aims at creating an embedded board with a microphone, speaker and internet as add-ons to interact with robots with voice and get responses in terms of voice/visual feedback. This is still in development and is not tested completely. This is completely ***open-source*** for anyone to use.
 
-# How to setup the project
+# Algorithm
 
-## Install dependencies
+```mermaid
+flowchart TD
+    A[Start] --> B[Voice Input using Microphone]
+    B --> C[Voice to Text Conversion]
+    C --> D[Text to ChatGPT]
+    D --> E[ChatGPT reads system info]
+    E --> F[Generate Proper Response in GPT]
+    F --> G[Reponse to Speech Conversion]
+    G --> H[Voice Output on Speakers]
+    G --> I[Response Output on Actuator]
+    H --> Z[End]
+    I --> Z[End]
+```
 
-# How to use the project
+# To-Do
 
-## Assignment 1
-
-# Understanding the Assignment
-
-## Assignment 1
-
-### file 1
-
-
-
-🥳 _Ladies and Gentlemen!!_ \
-🥳 _Hope you have a good day!!_\
-🥳 _We are all done with the project here!!_
+- [ ] Build Proof of Concept on Desktop Environment using Python:
+  - [ ] Speech-to-Text Conversion using Google API
+  - [ ] Send Converted Text to ChatGPT API
+  - [ ] Fetch the Response from ChatGPT
+  - [ ] Text-to-Speech Conversion
+  - [ ] Integrate GPT To Read System Data
+- [ ] Improve efficiency by switching to C++
+- [ ] Select an embedded platform to implement the code on
+- [ ] Improve efficiency for the specific embedded platform
 
 # Designer Details
 
-- Designed for:
-  - Company Name
-  - Project Name
-- Designed by:
-  - [Parth Patel](mailto:parth.pmech@gmail.com)
+Designed by: [Parth Patel](mailto:parth.pmech@gmail.com)
 
 # License
 
